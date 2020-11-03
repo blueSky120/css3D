@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body,
+			#container {
+				height: 100%, width:100%;
+				background: #000;
+				perspective: 1000px;
+			}
+
+			#box {
+				height: 240px;
+				width: 160px;
+				margin: 200px auto;
+				transform-style: preserve-3d;
+				animation: myRotate 20s linear infinite;
+			}
+
+			#box div {
+				height: 240px;
+				width: 160px;
+				background: #fff;
+				position: absolute;
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+
+			#box1 {
+				transform: rotateY(36deg) translateZ(400px);
+			}
+
+			#box2 {
+				transform: rotateY(72deg) translateZ(400px);
+			}
+
+			#box3 {
+				transform: rotateY(108deg) translateZ(400px);
+			}
+
+			#box4 {
+				transform: rotateY(144deg) translateZ(400px);
+			}
+
+			#box5 {
+				transform: rotateY(180deg) translateZ(400px);
+			}
+
+			#box6 {
+				transform: rotateY(216deg) translateZ(400px);
+			}
+
+			#box7 {
+				transform: rotateY(252deg) translateZ(400px);
+			}
+
+			#box8 {
+				transform: rotateY(288deg) translateZ(400px);
+			}
+
+			#box9 {
+				transform: rotateY(324deg) translateZ(400px);
+			}
+
+			#box10 {
+				transform: rotateY(360deg) translateZ(400px);
+			}
+
+			img {
+				max-height: 240px;
+				max-width: 160px;
+				-webkit-box-reflect: below 10px -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+				box-shadow: 0px 0px 10px #FFF;
+			}
+
+			@keyframes myRotate {
+				from {
+					transform: rotateY(0deg);
+				}
+
+				/* 50%{transform:rotateX(-15deg)} */
+				to {
+					transform: rotateY(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="box">
+				<div id="box1">
+					<img src="https://img.adidas.com.cn/resources/2020/9/27/16011705782785228.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box2">
+					<img src="https://img.adidas.com.cn/resources/2020/9/27/16011733607846472.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box3">
+					<img src="https://img.adidas.com.cn/resources/2020/10/16/16028488924623056.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box4">
+					<img src="https://img.adidas.com.cn/resources/2020/11/2/1604299348152112.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box5">
+					<img src="https://img.adidas.com.cn/resources/2020/10/29/16039526456635575.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box6">
+					<img src="https://img.adidas.com.cn/resources/2019/6/10/15601572898304741_230X230.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box7">
+					<img src="https://img.adidas.com.cn/resources/2019/12/16/15764919391719229.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box8">
+					<img src="https://img.adidas.com.cn/resources/2019/12/3/15753572688268777.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box9">
+					<img src="https://img.adidas.com.cn/resources/2020/4/30/15882430673973888.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+				<div id="box10">
+					<img src="https://img.adidas.com.cn/resources/2020/4/30/15882472513782118.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" />
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
