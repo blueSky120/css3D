@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+			}
+			#container{
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+			.header,.footer{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 60px;
+				background-color: #000000;
+				color: #fff;
+			}
+			.main{
+				width: 100%;
+				flex: 1;
+				background-color: #D0D0CF;
+			}
+			.select{
+				width: 100%;
+				height: 40px;
+			}
+			ul{
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			ul li{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					height: 40px;
+					order: 2;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<header class="header">header</header>
+			<div class="main">
+				<select class="select" id="select">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+				</select>
+				<ul class="list">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+				</ul>
+			</div>
+			<footer class="footer">footer</footer>
+		</div>
+		<script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			 $(function(){
+				 $("#select").on('change',function(e){
+					var index=e.target.value;
+					$(".list li").eq(index).css({
+						'order':'1'
+					}).siblings().css({
+						'order':'2'
+					})
+				 })
+			 })
+		</script>
+	</body>
+</html>
